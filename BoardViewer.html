@@ -34,7 +34,7 @@
       window.displayBoard = function(matrix){
         $('body').html(
           new BoardView({
-            model: new Board({n : 3})
+            model: new Board(matrix)
           }).render()
         );
       };
@@ -47,11 +47,11 @@
           [0, 0, 1, 0]
         ]);
 
-        var n = 3;
-        //findNRooksSolution(n);
-        //countNRooksSolutions(n);
+        var n = 4;
+        findNRooksSolution(n);
+        countNRooksSolutions(n);
         findNQueensSolution(n);
-        //countNQueensSolutions(n);
+        countNQueensSolutions(n);
       });
     </script>
   </body>
